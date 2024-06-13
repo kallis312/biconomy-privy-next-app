@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 import { PrivyProvider } from '@privy-io/react-auth';
-import { polygonAmoy } from "viem/chains";
+import { sepolia, polygonAmoy } from "viem/chains";
 
 
 export default function PrivyProviders({ children }: { children: React.ReactNode }) {
@@ -22,9 +22,9 @@ export default function PrivyProviders({ children }: { children: React.ReactNode
 
         },
         loginMethods: ["email", "google"],
-        defaultChain: polygonAmoy,
+        defaultChain: sepolia,
         supportedChains: [
-          polygonAmoy
+          sepolia, polygonAmoy
         ]
       }}
     >
